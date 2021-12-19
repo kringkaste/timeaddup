@@ -14,13 +14,11 @@ You can modify the result by a number of minutes. Just add the string `+10m` to 
 
 ## Install for Alfred on macOS
 
-If you want to use the script in Alfred, you first have to copy the `timecalc.py` to your site-packages folder:
+If you want to use the script in Alfred, you first have to copy the `timecalc` module to your site-packages folder:
 
 ```shell
-# Create the folder
-mkdir ~/Library/Python/3.8/lib/python/site-packages/timecalc
-# Copy the module to the folder
-cp timecalc.py ~/Library/Python/3.8/lib/python/site-packages/timecalc/__init__.py
+# Install the module
+cp -r timecalc ~/Library/Python/3.8/lib/python/site-packages
 ```
 
 Then you can copy the `timeaddup.py` somewhere in your system. The path in the included `timeaddup.alfredworkflow` file expects the script in `/usr/local/bin`. You can change it later in the imported workflow if you use an other folder.
@@ -30,3 +28,19 @@ sudo cp timeaddup.py /usr/local/bin
 ```
 
 Then import the workflow by double click the `timeaddup.alfredworkflow` in the Finder.
+
+## Install for Albert on Linux
+
+Clone this repo into the Albert extension folder:
+
+```shell
+git clone git@github.com:kringkaste/timeaddup.git ~/.local/share/albert/org.albert.extension.python/modules/timeaddup
+```
+
+Then copy the `timecalc` module to your site-packages folder:
+
+```shell
+cp -r ~/.local/share/albert/org.albert.extension.python/modules/timeaddup/timecalc ~/.local/lib/python3.9/site-packages
+```
+
+Restart Albert and go to the extension tab in the settings and activate the extension.

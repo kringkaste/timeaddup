@@ -12,7 +12,7 @@ def handleQuery(Query):
     if not Query.isTriggered:
         return
 
-    result = timecalc.calc(Query)
+    result = timecalc.calc(Query.string)
 
     return Item(id=__title__,
                 text=result,
