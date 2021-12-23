@@ -1,3 +1,4 @@
+import locale
 import time
 
 def calc(string):
@@ -24,6 +25,6 @@ def calc(string):
             endDate = None
 
     sumTime = sumTime / 60 / 60
-
-    result = "%.2f" % sumTime
-    return result.replace(".", ",")
+    result = locale.format_string("%.2f", sumTime)
+    
+    return result
