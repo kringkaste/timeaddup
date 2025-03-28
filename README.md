@@ -1,3 +1,6 @@
+> [!CAUTION]
+> This repository is not maintained anymore. If you are using Albert, there is a new [repository](https://github.com/kringkaste/albert-time-addup).
+
 # Add up time ranges
 
 This script is for [Alfred](https://www.alfredapp.com/) or [Albert](https://albertlauncher.github.io/) to add up multiple time ranges. The result is a floating-point number of hours.
